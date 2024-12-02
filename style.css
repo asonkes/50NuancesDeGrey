@@ -25,7 +25,7 @@ body {
 }
 
 .slide {
-    min-height: 100%;
+    height: 100vh;
     max-width: 100%;
     position: relative;
     scroll-behavior: smooth;
@@ -36,6 +36,12 @@ body {
     .slide {
         min-height: auto;
     }
+}
+
+.homeImage {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 h2,
@@ -200,7 +206,7 @@ nav ul li:hover ul {
 /************************************/
 .titre_presentation_1 {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     right: 70px;
     font-family: 'DM Serif Display', serif;
     font-size: 100px;
@@ -232,6 +238,11 @@ nav ul li:hover ul {
         transform: translateY(-150px);
         font-size: 80px;
     }
+    @media screen and (max-width: 800px) {
+        #titre_presentation_1 {
+            font-size: 60px;
+        }
+    }
 
     @keyframes translate_titre_mobile_1 {
         from {
@@ -258,6 +269,8 @@ nav ul li:hover ul {
 .image_presentation_1 {
     position: absolute;
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 @keyframes fondu {
@@ -288,10 +301,10 @@ nav ul li:hover ul {
 
 #texte_presentation_1 {
     width: 450px;
-    top: 16px;
+    top: 0;
     left: 40px;
     position: relative;
-    font-size: 26px;
+    font-size: 23px;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 4;
     border-radius: 10px;
@@ -303,6 +316,19 @@ nav ul li:hover ul {
     animation-fill-mode: forwards;
     animation-delay: 2s;
     transform: translateX(-600px);
+    margin: 15px 0 15px 0;
+}
+
+@media screen and (max-width: 1000px) {
+    #texte_presentation_1 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #texte_presentation_1 {
+        font-size: 16px;
+    }
 }
 
 @keyframes translate_text_1 {
@@ -339,7 +365,8 @@ nav ul li:hover ul {
 .video_bande_annonce_1 {
     position: relative;
     width: 100%;
-    bottom: 70px;
+    height: 100%;
+    bottom: 35px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -358,9 +385,15 @@ nav ul li:hover ul {
     padding-top: 35px;
 }
 
+#gal1 {
+    max-width: 1200px;
+}
+
 #img1 {
-    width: 1200px;
-    height: 600px;
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
     padding-top: 20px;
     transition: all 1s;
 }
@@ -391,9 +424,11 @@ nav ul li:hover ul {
     #galerie_1 #img3,
     #galerie_1 #img4,
     #galerie_1 #img5 {
-        width: 100%;
-        height: auto;
         max-width: 100%;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        padding: 20px 150px 20px 150px;
     }
 }
 
@@ -436,6 +471,12 @@ nav ul li:hover ul {
         font-size: 80px;
     }
 
+    @media screen and (max-width: 800px) {
+        #titre_presentation_2 {
+            font-size: 60px;
+        }
+    }
+
     @keyframes translate_titre_mobile_2 {
         from {
             transform: translateY(-150px);
@@ -461,6 +502,8 @@ nav ul li:hover ul {
 .image_presentation_2 {
     position: absolute;
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
     animation-name: fondu;
     animation-duration: 2.5s;
     animation-iteration-count: 1;
@@ -480,10 +523,10 @@ nav ul li:hover ul {
 
 #texte_presentation_2 {
     width: 450px;
-    top: 16px;
+    top: 0;
     left: 40px;
     position: relative;
-    font-size: 26px;
+    font-size: 23px;
     background-color: rgba(0, 0, 0, 0.3);
     text-shadow: 4px 4px 10px rgba(243, 242, 242, 0.86);
     z-index: 4;
@@ -496,6 +539,18 @@ nav ul li:hover ul {
     animation-fill-mode: forwards;
     animation-delay: 4s;
     transform: translateX(-600px);
+    margin: 15px 0 15px 0;
+}
+@media screen and (max-width: 1000px) {
+    #texte_presentation_2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #texte_presentation_2 {
+        font-size: 16px;
+    }
 }
 
 @keyframes translate_text_2 {
@@ -532,7 +587,8 @@ nav ul li:hover ul {
 .video_bande_annonce_2 {
     position: relative;
     width: 100%;
-    bottom: 70px;
+    height: 100%;
+    bottom: 35px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -551,9 +607,15 @@ nav ul li:hover ul {
     padding-top: 35px;
 }
 
+#gal1 {
+    max-width: 1200px;
+}
+
 #galerie_2 #img1 {
-    width: 1200px;
-    height: 600px;
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
     padding-top: 20px;
     transition: all 1s;
 }
@@ -585,8 +647,10 @@ nav ul li:hover ul {
     #galerie_2 #img4,
     #galerie_2 #img5 {
         width: 100%;
-        height: auto;
+        height: 250px;
+        object-fit: cover;
         max-width: 100%;
+        padding: 20px 150px 20px 150px;
     }
 }
 
@@ -656,6 +720,8 @@ nav ul li:hover ul {
 .image_presentation_3 {
     position: absolute;
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
     animation-name: fondu;
     animation-duration: 2.5s;
     animation-iteration-count: 1;
@@ -680,10 +746,10 @@ h2 {
 
 #texte_presentation_3 {
     width: 450px;
-    top: 16px;
+    top: 0;
     left: 40px;
     position: relative;
-    font-size: 26px;
+    font-size: 23px;
     background-color: rgba(0, 0, 0, 0.1);
     z-index: 4;
     border-radius: 10px;
@@ -695,6 +761,19 @@ h2 {
     animation-fill-mode: forwards;
     animation-delay: 4s;
     transform: translateX(-600px);
+    margin: 15px 0 15px 0;
+}
+
+@media screen and (max-width: 1000px) {
+    #texte_presentation_3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #texte_presentation_3 {
+        font-size: 16px;
+    }
 }
 
 @keyframes translate_text_3 {
@@ -706,7 +785,6 @@ h2 {
         transform: translateX(0);
     }
 }
-
 
 @media screen and (max-width: 1500px) {
     #texte_presentation_3 {
@@ -733,7 +811,8 @@ h2 {
 .video_bande_annonce_3 {
     position: relative;
     width: 100%;
-    bottom: 70px;
+    height: 100%;
+    bottom: 35px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -759,8 +838,10 @@ h2 {
 }
 
 #galerie_3 #img1 {
-    width: 1200px;
-    height: 600px;
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
     padding-top: 20px;
     transition: all 1s;
 }
@@ -791,39 +872,43 @@ h2 {
     #galerie_3 #img3,
     #galerie_3 #img4,
     #galerie_3 #img5 {
-        width: 100%;
-        height: auto;
         max-width: 100%;
+        width: 100%;
+        height: 270px;
+        object-fit: cover;
+        padding: 20px 150px 20px 150px;
     }
 }
 
 /************************************/
 /*            CONTACT               */
 /************************************/
-.image_presentation_contact {
-    position: absolute;
-    width: 100%;
-    max-height: 1000px;
-}
-
 .contenu_enveloppe {
-    height: 100vh;
     width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.image_presentation_contact {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 #contenu_envelope_2 {
     height: 600px;
     width: 900px;
-    top: 300px;
+    top: 80px;
     background-color: white;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 0;
+    border: 4px solid orange;
 }
 
 .lettre {
@@ -959,6 +1044,8 @@ form input {
 /*            FOOTER                */
 /************************************/
 footer {
+    position: relative;
+    max-width: 100%;
     background-color: rgb(37, 42, 48);
 }
 
